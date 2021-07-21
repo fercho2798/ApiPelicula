@@ -33,13 +33,19 @@ export const DetallesPantalla = ({route}) => {
             <Image style={styles.images} source={{uri: datos.Poster}} />
           </View>
         )}
-        <View style={styles.container2}>
-          <Text style={styles.txt}>Fecha de exhibicion:{datos.Released}</Text>
-          <Text style={styles.txt}>Actores:{datos.Actors}</Text>
-          <Text style={styles.txt}>Sipnosis{datos.Plot}</Text>
-          <Text style={styles.txt}>Genero de pelicula:{datos.Genre}</Text>
-          <Text style={styles.txt}>Productora:{datos.Production}</Text>
-          <Text style={styles.txt}>Premios:{datos.Awards}</Text>
+        <View style={styles.container}>
+          <Text style={styles.borde}>Fecha de exhibicion:</Text>
+          <Text style={styles.txt}>{datos.Released}</Text>
+          <Text style={styles.borde}>Actores:</Text>
+          <Text style={styles.txt}>{datos.Actors}</Text>
+          <Text style={styles.borde}>Sipnosis:</Text>
+          <Text style={styles.txt}>{datos.Plot}</Text>
+          <Text style={styles.borde}>Genero de pelicula:</Text>
+          <Text style={styles.txt}>{datos.Genre}</Text>
+          <Text style={styles.borde}>Productora:</Text>
+          <Text style={styles.txt}>{datos.Production}</Text>
+          <Text style={styles.borde}>Premios:</Text>
+          <Text style={styles.txt}>{datos.Awards}</Text>
         </View>
       </ScrollView>
     </View>
@@ -68,6 +74,21 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    paddingTop: 30,
+    paddingTop: 40,
+    paddingBottom: 40,
+    color: 'red',
+    height: 150,
+    textAlign: 'center',
+    margin: 10,
+  },
+  borde: {
+    height: 50,
+    fontSize: 20,
+    width: 412,
+    flex: 1,
+    paddingTop: 10,
+    backgroundColor: 'black',
+    textAlign: 'center',
+    color: 'red',
   },
 });
